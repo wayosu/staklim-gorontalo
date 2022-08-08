@@ -1,0 +1,300 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\PrakiraanHujanDasarian;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
+
+class PrakiraanHujanDasarianController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $prahd = DB::table('prakiraan_hujan_dasarians')->orderBy('id', 'desc')->get();
+        return view('admin.prakiraan-hd.index', compact('prahd'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return view('admin.prakiraan-hd.create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $request->validate([
+            'title' => ['required'],
+            'first_img' => ['required', 'mimes:png,jpg,jpeg', 'max:2000'],
+            'first_pdf' => ['required', 'mimes:pdf', 'max:2000'],
+            'second_img' => ['required', 'mimes:png,jpg,jpeg', 'max:2000'],
+            'second_pdf' => ['required', 'mimes:pdf', 'max:2000'],
+            'three_img' => ['required', 'mimes:png,jpg,jpeg', 'max:2000'],
+            'three_pdf' => ['required', 'mimes:pdf', 'max:2000'],
+        ],
+        [
+            'first_img.max' => 'Ukuran gambar lebih dari 2 MB.',
+            'first_pdf.max' => 'Ukuran file lebih dari 2 MB.',
+            'second_img.max' => 'Ukuran gambar lebih dari 2 MB.',
+            'second_pdf.max' => 'Ukuran file lebih dari 2 MB.',
+            'three_img.max' => 'Ukuran gambar lebih dari 2 MB.',
+            'three_pdf.max' => 'Ukuran file lebih dari 2 MB.',
+        ]);
+
+        $first_img = $request->first_img;
+        $first_pdf = $request->first_pdf;
+        $second_img = $request->second_img;
+        $second_pdf = $request->second_pdf;
+        $three_img = $request->three_img;
+        $three_pdf = $request->three_pdf;
+        $new_first_img  = time().$first_img->getClientOriginalName();
+        $new_first_pdf  = time().$first_pdf->getClientOriginalName();
+        $new_second_img  = time().$second_img->getClientOriginalName();
+        $new_second_pdf  = time().$second_pdf->getClientOriginalName();
+        $new_three_img  = time().$three_img->getClientOriginalName();
+        $new_three_pdf  = time().$three_pdf->getClientOriginalName();
+
+        $prahd = PrakiraanHujanDasarian::create([
+            'title' => $request->title,
+            'slug' => Str::slug($request->title),
+            'desc' => $request->desc,
+            'first_img' => 'uploads/prahd/img/'.$new_first_img,
+            'first_pdf' => 'uploads/prahd/pdf/'.$new_first_pdf,
+            'second_img' => 'uploads/prahd/img/'.$new_second_img,
+            'second_pdf' => 'uploads/prahd/pdf/'.$new_second_pdf,
+            'three_img' => 'uploads/prahd/img/'.$new_three_img,
+            'three_pdf' => 'uploads/prahd/pdf/'.$new_three_pdf,
+        ]);
+
+        if ($prahd)
+        {
+            $first_img->move('uploads/prahd/img/', $new_first_img);
+            $first_pdf->move('uploads/prahd/pdf/', $new_first_pdf);
+            $second_img->move('uploads/prahd/img/', $new_second_img);
+            $second_pdf->move('uploads/prahd/pdf/', $new_second_pdf);
+            $three_img->move('uploads/prahd/img/', $new_three_img);
+            $three_pdf->move('uploads/prahd/pdf/', $new_three_pdf);
+            return redirect()->route('prakiraan-hujan-dasarian.index');
+        }
+        else
+        {
+            return redirect()->route('prakiraan-hujan-dasarian.index');
+        }
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\PrakiraanHujanDasarian  $prakiraanHujanDasarian
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\PrakiraanHujanDasarian  $prakiraanHujanDasarian
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        $prahd = PrakiraanHujanDasarian::findorfail($id);
+        return view('admin.prakiraan-hd.edit', compact('prahd'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\PrakiraanHujanDasarian  $prakiraanHujanDasarian
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'title' => ['required'],
+            'first_img' => ['mimes:png,jpg,jpeg', 'max:2000'],
+            'first_pdf' => ['mimes:pdf', 'max:2000'],
+            'second_img' => ['mimes:png,jpg,jpeg'],
+            'second_pdf' => ['mimes:pdf', 'max:2000'],
+            'three_img' => ['mimes:png,jpg,jpeg', 'max:2000'],
+            'three_pdf' => ['mimes:pdf', 'max:2000'],
+        ],
+        [
+            'first_img.max' => 'Ukuran gambar lebih dari 2 MB.',
+            'first_pdf.max' => 'Ukuran file lebih dari 2 MB.',
+            'second_img.max' => 'Ukuran gambar lebih dari 2 MB.',
+            'second_pdf.max' => 'Ukuran file lebih dari 2 MB.',
+            'three_img.max' => 'Ukuran gambar lebih dari 2 MB.',
+            'three_pdf.max' => 'Ukuran file lebih dari 2 MB.',
+        ]);
+
+        $prahd = PrakiraanHujanDasarian::findorfail($id);
+
+        if ($request->has('first_img')) {
+            $destination1 = $request->first_img_lama;
+            if (File::exists($destination1)) {
+                File::delete($destination1);
+            }
+            $first_img = $request->first_img;
+            $new_first_img = time().$first_img->getClientOriginalName();
+            $first_img->move('uploads/prahd/img/', $new_first_img);
+        }
+
+        if ($request->has('first_pdf')) {
+            $destination2 = $request->first_pdf_lama;
+            if (File::exists($destination2)) {
+                File::delete($destination2);
+            }
+            $first_pdf = $request->first_pdf;
+            $new_first_pdf = time().$first_pdf->getClientOriginalName();
+            $first_pdf->move('uploads/prahd/pdf/', $new_first_pdf);
+        }
+
+        if ($request->has('second_img')) {
+            $destination3 = $request->second_img_lama;
+            if (File::exists($destination3)) {
+                File::delete($destination3);
+            }
+            $second_img = $request->second_img;
+            $new_second_img = time().$second_img->getClientOriginalName();
+            $second_img->move('uploads/prahd/img/', $new_second_img);
+        }
+
+        if ($request->has('second_pdf')) {
+            $destination4 = $request->second_pdf_lama;
+            if (File::exists($destination4)) {
+                File::delete($destination4);
+            }
+            $second_pdf = $request->second_pdf;
+            $new_second_pdf = time().$second_pdf->getClientOriginalName();
+            $second_pdf->move('uploads/prahd/pdf/', $new_second_pdf);
+        }
+
+        if ($request->has('three_img')) {
+            $destination3 = $request->three_img_lama;
+            if (File::exists($destination3)) {
+                File::delete($destination3);
+            }
+            $three_img = $request->three_img;
+            $new_three_img = time().$three_img->getClientOriginalName();
+            $three_img->move('uploads/prahd/img/', $new_three_img);
+        }
+
+        if ($request->has('three_pdf')) {
+            $destination4 = $request->three_pdf_lama;
+            if (File::exists($destination4)) {
+                File::delete($destination4);
+            }
+            $three_pdf = $request->three_pdf;
+            $new_three_pdf = time().$three_pdf->getClientOriginalName();
+            $three_pdf->move('uploads/prahd/pdf/', $new_three_pdf);
+        }
+
+        $prahd_data = [
+            'title' => $request->title,
+            'slug' => Str::slug($request->title),
+            'desc' => $request->desc,
+        ];
+
+        if ($request->has('first_img')) {
+            $req_first_img = ['first_img' => 'uploads/prahd/img/'.$new_first_img];
+            $prahd_data = array_merge($prahd_data, $req_first_img);
+        }
+
+        if ($request->has('first_pdf')) {
+            $req_first_pdf = ['first_pdf' => 'uploads/prahd/pdf/'.$new_first_pdf];
+            $prahd_data = array_merge($prahd_data, $req_first_pdf);
+        }
+        
+        if ($request->has('second_img')) {
+            $req_second_img = ['second_img' => 'uploads/prahd/img/'.$new_second_img];
+            $prahd_data = array_merge($prahd_data, $req_second_img);
+        }
+
+        if ($request->has('second_pdf')) {
+            $req_second_pdf = ['second_pdf' => 'uploads/prahd/pdf/'.$new_second_pdf];
+            $prahd_data = array_merge($prahd_data, $req_second_pdf);
+        }
+
+        if ($request->has('three_img')) {
+            $req_three_img = ['three_img' => 'uploads/prahd/img/'.$new_three_img];
+            $prahd_data = array_merge($prahd_data, $req_three_img);
+        }
+
+        if ($request->has('three_pdf')) {
+            $req_three_pdf = ['three_pdf' => 'uploads/prahd/pdf/'.$new_three_pdf];
+            $prahd_data = array_merge($prahd_data, $req_three_pdf);
+        }
+        
+        // dd($prahd_data);
+
+        $prahd->update($prahd_data);
+
+        return redirect()->route('prakiraan-hujan-dasarian.index');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\PrakiraanHujanDasarian  $prakiraanHujanDasarian
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        $prahd = PrakiraanHujanDasarian::findOrFail($id);
+
+        $destination1 = $prahd->first_img;
+        if (File::exists($destination1)) {
+            File::delete($destination1);
+        }
+
+        $destination2 = $prahd->second_img;
+        if (File::exists($destination2)) {
+            File::delete($destination2);
+        }
+
+        $destination3 = $prahd->three_img;
+        if (File::exists($destination3)) {
+            File::delete($destination3);
+        }
+
+        $destination4 = $prahd->first_pdf;
+        if (File::exists($destination4)) {
+            File::delete($destination4);
+        }
+
+        $destination5 = $prahd->second_pdf;
+        if (File::exists($destination5)) {
+            File::delete($destination5);
+        }
+
+        $destination6 = $prahd->three_pdf;
+        if (File::exists($destination6)) {
+            File::delete($destination6);
+        }
+
+        $prahd = PrakiraanHujanDasarian::where('id', $id)->delete();
+
+        return redirect()->route('prakiraan-hujan-dasarian.index');
+    }
+}

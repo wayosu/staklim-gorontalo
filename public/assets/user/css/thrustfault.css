@@ -1,0 +1,1646 @@
+/*
+* Thrust Fault Style
+* Styling by WBI - BMKG 2016
+*/
+
+/*--------------------------------------------------
+General
+----------------------------------------------------*/
+body {
+	background:;
+	color: #333;
+	font: 14px/1.6 'Roboto', sans-serif;
+}
+body.header-fixed-space {
+	padding-top: 135px;
+}
+@media (max-width: 991px) {
+	body.header-fixed-space {
+		padding-top: 0;
+	}
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto Slab', sans-serif;
+}
+.table>thead>tr>th {
+	vertical-align: middle;
+}
+.margin-top-13 {
+	margin-top: 13px;
+}
+a.more {
+	display: inline-block;
+	padding: 5px 14px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 15px;
+	font-size: 13px;
+	text-decoration: none;
+}
+a.more:hover, a.more:focus {
+	color: #fff;
+    background: #72c02c;
+    border-color: #72c02c;
+}
+.more-arrow {
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+}
+.headline h4 {
+	font-size: 16px;
+}
+.headline h4 small {
+	font-size: 85%;
+	color: inherit;
+}
+h2.heading-md {
+    font-size: 24px;
+    line-height: 24px;
+}
+.bmkg-home .headline {
+	margin: 0 0 13px 0;
+}
+.bmkg-home .owl-navigation {
+	margin-bottom: 3px;
+}
+.bmkg-page h2.blog-grid-title-lg {
+	margin-bottom: 30px;
+}
+.bmkg-page .blog-grid h3 {
+	margin-top: 20px;
+}
+.blog-grid h4 {
+	color: #333;
+}
+.blog-grid img {
+	max-width: 100%;
+	height: auto;
+}
+.aligncenter {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.owl-btn {
+	background: #fff;
+	box-shadow: #ddd -1px 2px 1px;
+}
+.row-flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+.col-flex {
+	width: 25%;
+    flex-grow: 1;
+}
+
+
+/* Bahasa */
+.bahasa a {
+	color: #fff;
+}
+.bahasa a:first-child {
+	margin-right: 15px;
+	margin-left: 10px;
+}
+.bahasa span {
+	background-repeat: no-repeat;
+	background-size: 18px 12px;
+	background-position: center center;
+	position: relative;
+	display: inline-block;
+	width: 15px;
+	height: 10px;
+	margin-right: 3px;
+}
+.bahasa .id {
+	background-image: url(../img/id.png);
+}
+.bahasa .en {
+	background-image: url(../img/gb.png);
+}
+
+
+/*--------------------------------------------------
+Menu Navigation
+----------------------------------------------------*/
+.header-v8 .navbar-brand {
+	height: 80px;
+    max-height: 80px;
+    line-height: 40px;
+}
+.header-v8 .navbar-brand img {
+	margin-right: 5px;
+	vertical-align: top;
+}
+.navbar-brand {
+	position: relative;
+}
+.navbar-brand a {
+	color: #333;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: 700;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.navbar-brand a span {
+	display: inline-block;
+	line-height: 16px;
+	width: 260px;
+	vertical-align: middle;
+}
+html[lang="id"] .navbar-brand a span {
+	width: 340px;
+}
+html[lang="id"] .header-v8 .navbar-brand .slogan {
+	display: inline-block;
+	color: #333;
+	font-family: Arial;
+	font-size: 12px;
+	margin-bottom: 0;
+	position: absolute;
+	top: 40px;
+	left: 64px;
+}
+html[lang="id"] .header-v8.header-fixed-shrink .navbar-brand .slogan, .header-v8.header-fixed-shrink .navbar-brand .slogan, .header-v8 .navbar-brand .slogan {
+	display: none;
+}
+.nav.navbar-nav > li {
+	font-family: 'Roboto Slab', sans-serif;
+}
+.header-v8 .navbar-nav > li > a {
+	font-size: 12px;
+}
+.header-v8 .mega-menu .dropdown-submenu .dropdown-menu.kir {
+    right: 100%;
+	left: inherit;
+}
+@media (min-width: 992px) {
+	.header-v8 .navbar-nav > li > a {
+		padding: 20px 12px;
+		line-height: 54px;
+	}
+}
+@media (max-width: 991px) {
+	.header-v8 .navbar-brand .slogan,
+	html[lang="id"] .header-v8 .navbar-brand .slogan {
+	    left: 69px;
+	}
+}
+
+
+/*--------------------------------------------------
+All Section
+----------------------------------------------------*/
+#meteorologi-geofisika, #klimatologi, #berita-press-release, #foto-artikel-pengumuman, #partner {
+	padding: 30px 0;
+}
+#meteorologi-geofisika, #klimatologi {
+	background: #f7f7f7;
+}
+#partner {
+	padding-top: 0;
+}
+html[lang="en"] #partner {
+	padding-top: 30px;
+}
+#partner img {
+	margin: 0 auto
+}
+.prakicu-kota-besar-bg, .gempabumi-home-bg, .kualitas-udara-home-bg, .img-mkg-home-bg {
+	background: #fff;
+	padding: 10px;
+	box-shadow: #ddd -1px 2px 1px;
+}
+.bmkg-page .gempabumi-home-bg, .banner-layanan-home {
+	background: #f6f6f6;
+}
+
+
+/*--------------------------------------------------
+Meteorologi-Geofisika Section
+----------------------------------------------------*/
+/* Prakiraan Cuaca Kota-kota Besar */
+.prakicu-kota .kota {
+	font-size: 16px;
+	margin-top: 0;
+}
+.bmkg-home .id-501373 .prakicu-kota .kota {
+	font-size: 14px;
+}
+.prakicu-kota p {
+	font-size: 14px;
+	margin-top: 5px;
+}
+.prakicu-kota img {
+	width: 64px;
+	height: 64px;
+	text-align: center;
+	filter: drop-shadow(0px 0px 10px #fff);
+	-webkit-filter: drop-shadow(0px 0px 10px #fff);
+}
+.prakicu-kota .service-block {
+	padding: 10px !important;
+	margin-bottom: 0 !important;
+}
+.prakicu-kota .link-block, .peringatan-dini-home .link-block {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+.cuaca-flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+.cuaca-flex-child {
+	flex-basis: 25%;
+	flex-grow: 1;
+	padding: 1px;
+}
+@media (min-width: 992px) {
+	.prakicu-kota .service-block {
+		min-height: 205px;
+	}
+}
+@media (max-width: 991px) {
+	.cuaca-flex-child {
+		flex-basis: 33.33333333%;
+	}
+}
+@media (max-width: 478px) {
+	.cuaca-flex-child {
+		flex-basis: 100%;
+	}
+}
+
+/* Peringatan Dini */
+.peringatan-dini-home-head {
+	background: #ed7b01;
+	border-right: 2px solid #fff;
+	height: 95px;
+	overflow: hidden;
+	box-shadow: #ddd -1px 2px 1px;
+}
+.peringatan-dini-home h4 {
+	font-size: 13px;
+	color: #fff;
+	text-align: center;
+	padding-top: 10px;
+}
+.peringatan-dini-home h4 span {
+	background-image: url(../img/warning.png);
+	background-repeat: no-repeat;
+    background-size: 36px 36px;
+    background-position: center center;
+    position: relative;
+    display: block;
+    height: 40px;
+}
+.peringatan-dini-home-bg {
+	background: #ffa500;;
+	padding: 10px;
+	color: #111;
+	font-size: 13px;
+	height: 95px;
+	overflow: hidden;
+	box-shadow: #ddd -1px 2px 1px;
+}
+.peringatan-dini-home-bg strong {
+	display: block;
+}
+.peringatan-dini-home-bg a.moree {
+	color: #333;
+	font-style: italic;
+	border-bottom: 1px solid #333;
+}
+.peringatan-dini-home-bg a:hover {
+	color: #fff;
+}
+@media (max-width: 991px) {
+	.peringatan-dini-home-head, .peringatan-dini-home-bg {
+		height: auto;
+		border: none;
+	}
+}
+
+/* Gempabumi Terkini */
+.gempabumi-home .tab-v1 .tab-content img {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.gempabumi-home-bg {
+	min-height: 313px;
+}
+.gempabumi-side-bg {
+	
+}
+.gempabumi-detail {
+	font-size: 14px;
+	font-family: 'Roboto Slab', sans-serif;
+}
+.gempabumi-detail li {
+	margin-bottom: 15px;
+}
+.gempabumi-detail .waktu {
+	display: block;
+}
+.gempabumi-detail .ic {
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	padding-left: 35px;
+	padding-top: 15px;
+	font-size: 18px;
+	background-position: center left;
+	position: relative;
+}
+.gempabumi-detail .magnitude {
+	background-image: url(../img/gempabumi/magnitude.png);
+}
+.gempabumi-detail .magnitude:before {
+	content: 'Magnitudo';
+	font-size: 12px;
+	position: absolute;
+    top: 0;
+}
+html[lang="en"] .gempabumi-detail .magnitude:before {
+	content: 'Magnitude';
+}
+.gempabumi-detail .kedalaman {
+	background-image: url(../img/gempabumi/kedalaman.png);
+}
+.gempabumi-detail .kedalaman:before {
+	content: 'Kedalaman';
+	font-size: 12px;
+	position: absolute;
+    top: 0;
+}
+html[lang="en"] .gempabumi-detail .kedalaman:before {
+	content: 'Depth';
+}
+.gempabumi-detail .koordinat {
+	background-image: url(../img/gempabumi/koordinat.png);
+}
+.gempabumi-detail .koordinat:before {
+	content: 'Lokasi';
+	font-size: 12px;
+	position: absolute;
+    top: 0;
+}
+html[lang="en"] .gempabumi-detail .koordinat:before {
+	content: 'Location';
+}
+.gempabumi-detail .lokasi {
+	background-image: url(../img/gempabumi/lokasi.png);
+	font-size: 14px;
+	padding-top: 0;
+	background-size: 18px 18px;
+}
+.gempabumi-detail .tsunami {
+	background-image: url(../img/gempabumi/tsunami.png);
+	font-size: 14px;
+	padding-top: 0;
+	background-size: 18px 18px;
+}
+.gempabumi-detail .dirasakan {
+	background-image: url(../img/gempabumi/wilayah-dirasakan.png);
+	font-size: 14px;
+	padding-top: 0;
+	background-size: 18px 18px;
+}
+.gempabumi-detail.no-bot li {
+	margin-bottom: 5px;
+}
+.gempabumi-detail.no-bot li:last-child {
+	margin-top: 15px;
+}
+.gempabumi-detail.no-bot, .gempabumi-detail.no-bot li:last-child {
+	margin-bottom: 0;
+}
+.gempabumi-detail.no-bot .ic {
+	padding-top: 0;
+	background-size: 18px 18px;
+}
+.gempa-img {
+	background-position: center 27%;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	max-height: 600px;
+  	max-width: 600px;
+}
+@media (min-width: 991px) {
+	.gempabumi-detail li:nth-child(5), .gempabumi-detail li:nth-child(6), .gempabumi-detail li:nth-child(7) {
+		display: none;
+	}
+}
+@media (max-width: 991px) {
+	.gempabumi-detail.no-bot {
+		display: none;
+	}
+}
+.FlexEmbed {
+	display: block;
+	overflow: hidden;
+	position: relative;
+}
+.FlexEmbed:before {
+	content: "";
+	display: block;
+	width: 100%;
+}
+.FlexEmbed--2by1:before {
+	padding-bottom: 80%;
+}
+
+/* Warning Gempabumi */
+.warning-logo {
+	margin: 20px auto;
+	display: block;
+}
+.ps-logo {
+	margin: 20px auto;
+	display: block;
+	text-align: center;
+}
+.ps-logo img {
+	margin: 0 5px;
+}
+.warning-gempa h3 {
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+.warning-gempa .gempabumi-home-bg {
+	padding: 15px;
+	min-height: inherit;
+}
+.warning-gempa ul {
+	margin-bottom: 0;
+}
+.warning-gempa .gempabumi-detail {
+	padding-left: 0;
+}
+.warning-gempa .gempabumi-detail .nobot .ic {
+	padding-top: 0;
+	background-size: 18px 18px;
+}
+.warning-gempa .gempabumi-detail ul li:nth-child(4) {
+	margin-bottom: 10px;
+}
+@media (max-width: 478px) {
+	.warning-gempa .nobot {
+		display: none;
+	}
+	.warning-gempa .img-responsive {
+		margin-bottom: 20px;
+	}
+}
+@media (min-width: 479px) {
+	.warning-gempa .nobot1 {
+		display: none;
+	}
+}
+@media (max-width: 991px) {
+	.warning-gempa .nobot2 {
+		display: none;
+	}
+}
+@media (min-width: 1200px) {
+	.warning-gempa .nobot2 {
+		display: none;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.gempabumi-home .nav-tabs span {
+		display: none;
+	}
+	.warning-gempa .gempabumi-detail ul li:nth-child(6) {
+		margin-bottom: 0;
+	}
+	.warning-gempa .nobot3 {
+		display: none;
+	}
+}
+
+
+/*--------------------------------------------------
+Berita-Press Release Section
+----------------------------------------------------*/
+/* Berita Utama */
+.berita-utama-home .blog-slider .blog-slider-title h2 {
+	font-size: 22px;
+}
+.berita-utama-home .ms-tabs .ms-thumb {
+	padding: 15px;
+	height: 105px;
+	overflow: hidden;
+}
+.ms-slide-bgcont {
+	height: 160% !important;
+	object-position: center;
+	object-fit: cover;
+}
+.ms-slide-bgcont:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.7));
+	background: -webkit-linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.7));
+}
+/* .blog-slider {
+	height: 100%;
+} */
+.ms-skin-black-2 .ms-nav-next, .ms-skin-black-2 .ms-nav-prev {
+	top: 40%;
+}
+.ms-ctimer {
+	top: 10px;
+    left: 10px;
+}
+@media (max-width: 767px) {
+	.berita-utama-home .blog-slider .blog-slider-title h2 {
+		font-size: 18px;
+	}
+	.ms-nav-next, .ms-nav-prev {
+		display: none;
+	}
+	.berita-terkait .col-sm-3:nth-child(3){
+		clear: both;
+	}
+}
+@media (max-width: 478px) {
+	.berita-utama-home .blog-slider .blog-slider-title h2 {
+		font-size: 16px;
+	}
+}
+
+/* Press Release */
+.press-release-home-bg {
+	background: #f6f6f6;
+	padding: 10px;
+}
+.press-release-home-bg .blog-thumb {
+	border-bottom: 1px solid #e4e9f0;
+}
+.press-release-home-bg .blog-thumb:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+.blog-thumb-mkg {
+    float: left;
+    position: relative;
+    margin-right: 15px;
+}
+.blog-thumb-mkg img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+}
+.blog-thumb-mkg.wbg img {
+	 margin-bottom: 10px;
+}
+
+
+/*--------------------------------------------------
+Berita Foto-Artikel-Pengumuman Section
+----------------------------------------------------*/
+.foto-daerah-home-bg {
+	background: #f6f6f6;
+	padding: 10px !important;
+}
+.foto-daerah-home .blog-thumb {
+	border-bottom: 1px solid #e4e9f0;
+}
+.foto-daerah-home .blog-thumb:last-child {
+	margin-bottom: 0;
+	border-bottom: none;
+}
+.artikel-pengumuman-home .blog-thumb {
+	border-bottom: 1px dotted #e4e9f0;
+}
+
+
+/*--------------------------------------------------
+Klimatologi Section
+----------------------------------------------------*/
+.ku-chart {
+	text-align: center;
+}
+.ku-in {
+	background: #efefef;
+	padding: 3px;
+}
+.ku-in .circle {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.ku-in .circles-number {
+	font-family: 'Roboto Slab', sans-serif;
+}
+.ku-in .circles-number span span {
+	font-size: .6em !important;
+}
+.ku-legend {
+	margin-top: 5px;
+	margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+	overflow: auto;
+}
+.ku-legend li {
+	width: 20%;
+	float: left;
+	text-align: center;
+	font-size: 11px;
+	line-height: 14px;
+	padding: 3px 1px;
+}
+.ku-legend li:first-child {
+	background: #00cc00;
+}
+.ku-legend li:nth-child(2) {
+	background: #194cc9;
+	width: 15%;
+	color: #fff;
+}
+.ku-legend li:nth-child(3) {
+	background: #ffc900;
+}
+.ku-legend li:nth-child(4) {
+	background: #ff0000;
+	color: #fff;
+	width: 25%;
+}
+.ku-legend li:last-child {
+	background: #222;
+	color: #fff;
+}
+.ku-legend span {
+	font-size: 9px;
+}
+.ku-legend small {
+	display: block;
+	font-size: 10px;
+}
+@media (max-width: 480px) {
+	.ku-legend li {
+		min-height: 50px;
+	}
+}
+
+/*--------------------------------------------------
+Banner Layanan Section
+----------------------------------------------------*/
+.banner-layanan-home img {
+	width: 100%;
+	height: auto
+}
+
+
+/*--------------------------------------------------
+Meteorologi Page
+----------------------------------------------------*/
+/* Prakiraan Cuaca Provinsi */
+.table-prakicu-provinsi th, .table-prakicu-provinsi td {
+	text-align: center;
+}
+.table-prakicu-provinsi thead tr:first-child th:first-child, .table-prakicu-provinsi tbody td:first-child {
+	text-align: left;
+}
+.table-prakicu-provinsi img {
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	margin: 0 auto !important;
+	filter: drop-shadow(0px 0px 10px #fff);
+	-webkit-filter: drop-shadow(0px 0px 10px #fff);
+}
+.table-prakicu-provinsi .tekscuaca {
+	font-size: 10px;
+}
+.list-cuaca-provinsi .li, .list-cuaca-provinsi li {
+	padding: 7px 15px;
+}
+.icon-prov {
+	background-repeat: no-repeat;
+    background-size: 20px auto;
+    padding-left: 35px;
+    font-size: 18px;
+    background-position: center left;
+    position: relative;
+}
+.icon-prov.prov-00 {
+	background-image: url(../img/icon-prov/00.png);
+}
+.icon-prov.prov-01 {
+	background-image: url(../img/icon-prov/aceh.png);
+}
+.icon-prov.prov-02 {
+	background-image: url(../img/icon-prov/bali.png);
+}
+.icon-prov.prov-03 {
+	background-image: url(../img/icon-prov/kepulauan-bangka-belitung.png);
+}
+.icon-prov.prov-04 {
+	background-image: url(../img/icon-prov/banten.png);
+}
+.icon-prov.prov-05 {
+	background-image: url(../img/icon-prov/bengkulu.png);
+}
+.icon-prov.prov-06 {
+	background-image: url(../img/icon-prov/di-yogyakarta.png);
+}
+.icon-prov.prov-07 {
+	background-image: url(../img/icon-prov/dki-jakarta.png);
+}
+.icon-prov.prov-08 {
+	background-image: url(../img/icon-prov/gorontalo.png);
+}
+.icon-prov.prov-09 {
+	background-image: url(../img/icon-prov/jambi.png);
+}
+.icon-prov.prov-10 {
+	background-image: url(../img/icon-prov/jawa-barat.png);
+}
+.icon-prov.prov-11 {
+	background-image: url(../img/icon-prov/jawa-tengah.png);
+}
+.icon-prov.prov-12 {
+	background-image: url(../img/icon-prov/jawa-timur.png);
+}
+.icon-prov.prov-13 {
+	background-image: url(../img/icon-prov/kalimantan-barat.png);
+}
+.icon-prov.prov-14 {
+	background-image: url(../img/icon-prov/kalimantan-selatan.png);
+}
+.icon-prov.prov-15 {
+	background-image: url(../img/icon-prov/kalimantan-tengah.png);
+}
+.icon-prov.prov-16 {
+	background-image: url(../img/icon-prov/kalimantan-timur.png);
+}
+.icon-prov.prov-17 {
+	background-image: url(../img/icon-prov/kalimantan-utara.png);
+}
+.icon-prov.prov-18 {
+	background-image: url(../img/icon-prov/kepulauan-riau.png);
+}
+.icon-prov.prov-19 {
+	background-image: url(../img/icon-prov/lampung.png);
+}
+.icon-prov.prov-20 {
+	background-image: url(../img/icon-prov/maluku.png);
+}
+.icon-prov.prov-21 {
+	background-image: url(../img/icon-prov/maluku-utara.png);
+}
+.icon-prov.prov-22 {
+	background-image: url(../img/icon-prov/nusa-tenggara-barat.png);
+}
+.icon-prov.prov-23 {
+	background-image: url(../img/icon-prov/nusa-tenggara-timur.png);
+}
+.icon-prov.prov-24 {
+	background-image: url(../img/icon-prov/papua.png);
+}
+.icon-prov.prov-25 {
+	background-image: url(../img/icon-prov/papua-barat.png);
+}
+.icon-prov.prov-26 {
+	background-image: url(../img/icon-prov/riau.png);
+}
+.icon-prov.prov-27 {
+	background-image: url(../img/icon-prov/sulawesi-barat.png);
+}
+.icon-prov.prov-28 {
+	background-image: url(../img/icon-prov/sulawesi-selatan.png);
+}
+.icon-prov.prov-29 {
+	background-image: url(../img/icon-prov/sulawesi-tengah.png);
+}
+.icon-prov.prov-30 {
+	background-image: url(../img/icon-prov/sulawesi-tenggara.png);
+}
+.icon-prov.prov-31 {
+	background-image: url(../img/icon-prov/sulawesi-utara.png);
+}
+.icon-prov.prov-32 {
+	background-image: url(../img/icon-prov/sumatera-barat.png);
+}
+.icon-prov.prov-33 {
+	background-image: url(../img/icon-prov/sumatera-selatan.png);
+}
+.icon-prov.prov-34 {
+	background-image: url(../img/icon-prov/sumatera-utara.png);
+}
+.icon-prov.prov-35 {
+	background-image: url(../img/icon-prov/ibukota-indonesia.png);
+}
+
+/* Prakiraan Cuaca Kabupaten/Kota */
+.prakicu-kabkota .service-block {
+	height: inherit;
+}
+.prakicu-kota h2, .prakicu-kota p {
+	z-index: 1;
+	position: relative;
+}
+.prakicu-kota.bg-cuaca, .prakicu-kota .bg-cuaca {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.prakicu-kota.bg-cuaca:before, .prakicu-kota .bg-cuaca:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.3));
+	background-image: -webkit-linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.3));
+}
+.prakicu-kota .wi {
+	font-size: 22px;
+	margin-right: 3px;
+	position: relative;
+    top: 3px;
+}
+.prakicu-kota .wi-direction-up {
+	color: orange;
+}
+.prakicu-kota .wi-direction-down {
+	color: #3bb5ff;
+}
+.prakicu-kota .wi-raindrop {
+	color: #9cd1ff;
+}
+.prakicu-kota .wi-strong-wind {
+	color: #ffce19;
+}
+.prakicu-kota .wi-wind, .prakicu-kota .wi-refresh {
+	color: #ffce19;
+	font-size: 26px;
+    top: 5px;
+}
+.udara-kabur-siang, .udara-kabur {
+	background-image: url(../img/bg-cuaca/asap-halimun-kabut.jpg);
+}
+.udara-kabur-malam {
+	background-image: url(../img/bg-cuaca/asap-halimun-kabut.jpg);
+}
+.asap-siang, .asap {
+	background-image: url(../img/bg-cuaca/asap-halimun-kabut.jpg);
+}
+.asap-malam {
+	background-image: url(../img/bg-cuaca/asap-halimun-kabut.jpg);
+}
+.kabut-siang, .kabut {
+	background-image: url(../img/bg-cuaca/asap-halimun-kabut.jpg);
+}
+.kabut-malam {
+	background-image: url(../img/bg-cuaca/asap-halimun-kabut.jpg);
+}
+.berawan-siang, .berawan {
+	background-image: url(../img/bg-cuaca/berawan-siang.jpg);
+}
+.berawan-malam {
+	background-image: url(../img/bg-cuaca/berawan-malam.jpg);
+}
+.berawan-tebal-siang, .berawan.tebal {
+	background-image: url(../img/bg-cuaca/berawan-tebal-siang.jpg);
+}
+.berawan-tebal-malam {
+	background-image: url(../img/bg-cuaca/berawan-tebal-malam.jpg);
+}
+.cerah-berawan-siang, .cerah.berawan {
+	background-image: url(../img/bg-cuaca/cerah-berawan-siang.jpg);
+}
+.cerah-berawan-malam {
+	background-image: url(../img/bg-cuaca/cerah-berawan-malam.jpg);
+}
+.cerah-siang, .cerah {
+	background-image: url(../img/bg-cuaca/cerah-siang.jpg);
+}
+.cerah-malam {
+	background-image: url(../img/bg-cuaca/cerah-malam.jpg);
+}
+.hujan-badai-siang, .hujan.badai {
+	background-image: url(../img/bg-cuaca/hujan-petir.jpg);
+}
+.hujan-badai-malam {
+	background-image: url(../img/bg-cuaca/hujan-petir.jpg);
+}
+.hujan-petir-siang, .hujan.petir {
+	background-image: url(../img/bg-cuaca/hujan-petir.jpg);
+}
+.hujan-petir-malam {
+	background-image: url(../img/bg-cuaca/hujan-petir.jpg);
+}
+.hujan-ringan-siang, .hujan.ringan {
+	background-image: url(../img/bg-cuaca/hujan-ringan-lokal-siang.jpg);
+}
+.hujan-ringan-malam {
+	background-image: url(../img/bg-cuaca/hujan-ringan-lokal-malam.jpg);
+}
+.hujan-lokal-siang, .hujan.lokal {
+	background-image: url(../img/bg-cuaca/hujan-ringan-lokal-siang.jpg);
+}
+.hujan-lokal-malam{
+	background-image: url(../img/bg-cuaca/hujan-ringan-lokal-malam.jpg);
+}
+.hujan-sedang-siang, .hujan.sedang {
+	background-image: url(../img/bg-cuaca/hujan-sedang-lebat-siang.jpg);
+}
+.hujan-sedang-malam {
+	background-image: url(../img/bg-cuaca/hujan-sedang-lebat-malam.jpg);
+}
+.hujan-lebat-siang, .hujan.lebat {
+	background-image: url(../img/bg-cuaca/hujan-sedang-lebat-siang.jpg);
+}
+.hujan-lebat-malam {
+	background-image: url(../img/bg-cuaca/hujan-sedang-lebat-malam.jpg);
+}
+@media (max-width: 478px) {
+	.col-flex {
+		width: 100%;
+	}
+	.kiri {
+		float: left;
+		width: 40%;
+		padding: 0 10px;
+	}
+	.kanan {float: right;
+		width: 60%;
+		text-align: left;
+		padding: 0 10px;
+	}
+}
+
+/* NDF Kecamatan */
+.prakicu-kabkota i.wi-direction-up, .prakicu-kabkota i.wi-raindrop {
+	margin-left: 15px;
+}
+.prakicu-kabkota i.wi-wind {
+	margin-left: 5px;
+}
+.col-md-100 {
+	width: 12.5%;
+	float: left;
+}
+.col-md-100.c-8 span {
+	display: block;
+}
+.prakicu-kabkota .col-md-100.c-8 i.wi-direction-up {
+	margin-left: 7px;
+}
+.prakicu-kabkota .col-md-100.c-8 i.wi-raindrop {
+	margin-left: 0;
+}
+.col-md-100.c-8 {
+	width: 12.5%;
+}
+.col-md-100.c-7 {
+	width: 14.28571429%;
+}
+.col-md-100.c-6 {
+	width: 16.66666667%;
+}
+.col-md-100.c-5 {
+	width: 20%;
+}
+.col-md-100.c-4 {
+	width: 25%;
+}
+.col-md-100.c-3 {
+	width: 33.33333333%;
+}
+.col-md-100.c-2 {
+	width: 50%;
+}
+.col-md-100.c-1 {
+	width: 100%;
+}
+@media (max-width: 991px) {
+	.col-md-100 {
+		width: 100% !important;
+	}
+	.col-md-100.c-8 span {
+		display: inline-block;
+	}
+	.prakicu-kabkota .col-md-100.c-8 i.wi-direction-up, .prakicu-kabkota .col-md-100.c-8 i.wi-raindrop {
+		margin-left: 15px;
+	}
+}
+
+/* Citra Satelit */
+.thumbnail-style {
+    padding: 7px;
+    margin-bottom: 20px;
+}
+.thumbnail-style:hover {
+    box-shadow: 0 0 8px #ddd;
+    transition: box-shadow 0.2s ease-in-out;
+}
+.satelit.col-md-6:nth-child(2n+1) {
+	clear: both;
+}
+
+/* Citra Satelit */
+#maritim.wrapper {
+	background: linear-gradient(to bottom, #E9F7F8 0%, #fff 70%) !important;
+}
+#maritim .peringatan-dini-home {
+	display: table;
+	float: none;
+}
+#maritim .peringatan-dini-home-head, #maritim .peringatan-dini-home-bg {
+	display: table-cell;
+	vertical-align: middle;
+	height: inherit;
+	float: none;
+}
+@media (max-width: 991px) {
+	#maritim .peringatan-dini-home-head, #maritim .peringatan-dini-home-bg {
+		height: auto;
+		border: none;
+		display: inherit;
+	}
+}
+
+
+/*--------------------------------------------------
+Klimatologi Page
+----------------------------------------------------*/
+/* Kualitas Udara */
+.highcharts-credits {
+	display: none;
+}
+.pm10 h4 {
+	text-transform: capitalize;
+}
+.img-pm10 li {
+	width: 20%;
+	float: left;
+	padding: 10px;
+}
+.img-pm10 li img {
+	width: 100%;
+	height: auto;
+}
+
+/* Hari Tanpa Hujan */
+#maphth, #mapaws {
+	width: 100%;
+	height: 500px;
+}
+.stasiun {
+	margin: 0 0 5px !important;
+	text-transform: capitalize;
+}
+.kab {
+	margin: 5px 0 !important;
+	text-transform: capitalize;
+}
+#legenda {
+	background: rgba(255,255,255,0.9);
+	padding: 5px;
+	margin: 5px;
+	border: 1px solid #111;
+	border-radius: 5px;
+}
+#legenda ul {
+	list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#legenda p {
+	margin-bottom: 5px;
+}
+#legenda img {
+	vertical-align: middle;
+	margin: 0 0 3px;
+    width: 14px;
+}
+#pilihkriteria {
+	margin: 10px;
+	width: 200px;
+}
+
+
+/*--------------------------------------------------
+Geofisika Page
+----------------------------------------------------*/
+/* Gempabumi Terkini dan Dirasakan */
+.gempabumi-modal.gempabumi-detail p {
+	font-weight: 600;
+}
+.gempabumi-modal.gempabumi-detail span.label-warning, span.label-warning {
+	display: inline-block;
+	font-size: 12px;
+	padding: 3px 7px;
+}
+.gempabumi-modal.gempabumi-detail li {
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+.gempabumi-modal.gempabumi-detail li.bl {
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+.gempabumi-modal.gempabumi-detail li.bl.dr {
+	white-space: pre-wrap;
+}
+.gempabumi-detail .ic.np {
+	padding-top: 5px;
+}
+
+/* Tabel Skala SIG */
+table.sig td {
+	text-align: center;
+	border: 1px solid #000;
+	padding: 10px;
+}
+table.sig td:nth-child(4) {
+	text-align: left;
+}
+.sig .head {
+	background-color: #4e81ba;
+	color: #fff;
+}
+.sig .head td {
+	font-weight: 700;
+	text-align: center !important;
+}
+.sig .head .satu {
+	width: 5%;
+}
+.sig .head .dua {
+	width: 5%
+}
+.sig .head .tiga {
+	width: 10%
+}
+.sig .head .empat {
+	width: 60%
+}
+.sig .head .lima {
+	width: 10%
+}
+.sig .head .enam {
+	width: 10%
+}
+.sig .row1 {
+	background-color: #fff;
+}
+.sig .row2 {
+	background-color: #92d14e;
+}
+.sig .row3 {
+	background-color: #feff01;
+}
+.sig .row4 {
+	background-color: #ffc000;
+}
+.sig .row5 {
+	background-color: #fe0000;
+	color: #fff;
+}
+.sig .row6 {
+	background-color: purple;
+	color: #fff;
+}
+
+
+/*--------------------------------------------------
+Footer
+----------------------------------------------------*/
+.footer-v8 .footer {
+	padding: 30px 0;
+}
+.footer-v8 .footer h2 {
+	margin: 2px 0 24px;
+}
+.footer-v8 .footer img.footer-logo {
+	width: 50px;
+}
+.footer-v8 .footer img.footer-logo {
+	margin: 0;
+}
+.logo-circle {
+	width: 75px;
+    height: 75px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 25%;
+    background: white;
+    line-height: 70px;
+}
+.sv a span {
+	color: #000;
+}
+.sv a:hover span {
+	color: #fff;
+}
+.embedmedia {
+	position: relative;
+	display: block;
+}
+.embedmedia:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../img/play.png) rgba(0,0,0,0.15) center center no-repeat;
+	width: 100%;
+	height: 100%;
+}
+}
+html[lang="en"] .ften {
+	display: none !important;
+}
+
+
+/*--------------------------------------------------
+Struktur Organisasi
+----------------------------------------------------*/
+.foto-pejabat {
+	width: 100px;
+	height: auto;
+}
+
+
+
+
+/*--------------------------------------------------
+Standar Waktu Indonesia
+----------------------------------------------------*/
+/* @font-face { 
+	font-family: 'FontJam'; 
+	src: url('../fonts/digital-7mono.eot');
+	src: url('../fonts/digital-7mono.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/digital-7mono.ttf') format('truetype');
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap');
+
+#timecontainer a, #timecontainer1 a {
+	color: #fff;
+}
+.FontDigit {
+	font-family: 'Inconsolata', monospace;
+	font-size: 14px;
+	color: #00ff00;
+}
+.hari-digit {
+	font-size: 12px;
+}
+.topbar-time {
+	line-height: 14px;
+}
+
+
+/*--------------------------------------------------
+Parallax
+----------------------------------------------------*/
+/* Image Backgrounds v1 */
+.bg-image-v1 {
+  width: 100%;
+  height: auto;
+  padding: 50px 0;
+  position: relative;
+  background: url(../img/bg/gb-blur.jpg) repeat fixed; 
+}
+.bg-image-v1:before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  content: " ";
+  position: absolute;
+  background: rgba(255,255,255,0.75);
+}
+
+/* Image Backgrounds v2 */
+.bg-image-v2 {
+  width: 100%;
+  height: auto;
+  padding: 50px 0;
+  position: relative;
+  background: url(../img/bg/7.jpg) repeat fixed;
+}
+.bg-image-v2:before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  content: " ";
+  position: absolute;
+  background: rgba(255,255,255,0.7);
+}
+
+/* Background Dark Cover */
+.bg-image-v2-dark:before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  content: " ";
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+}
+.bg-image-v2-dark h2,
+.bg-image-v2-dark p {
+  color: #eee !important;
+}
+
+
+/*--------------------------------------------------
+Carousel Block
+----------------------------------------------------*/
+ .no-space-carousel-block [class^="col-"],
+ .no-space-carousel-block [class*=" col-"] {
+	padding: 1px;
+}
+.row.no-space-carousel-block {
+	padding: 0 14px;
+}
+.carousel-block-table i.icon-custom {
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    padding-top: 17px;
+}
+.carousel-block-table h3 {
+	font-size: 40px;
+	padding: 10px 0 0 0;
+}
+.carousel-block-table h3,
+.carousel-block-table h3 i,
+.carousel-block-table h3 span {
+	color: #fff;
+	font-style: normal;
+	font-weight: 200 !important;
+}
+.carousel-block-table h3 span {
+	font-size: 25px;
+}
+.carousel-block-table h3 i {
+	font-size: 20px;
+	margin: 10px 0 0 4px;
+	display: inline-block;
+}
+.carousel-block-table ul {
+	padding-bottom: 10px;
+}
+.carousel-block-table ul li {
+	color: #fff;
+	padding: 5px 0;
+	font-size: 13px;
+}
+.carousel-block-table ul li span {
+	margin-right: 5px;
+}
+.carousel-block-table .btn-u.btn-brd {
+	color: #fff;
+	display: block;
+	border-color: #fff;
+}
+.carousel-block-table .btn-u.btn-brd:hover {
+	color: #555;
+	background: #fff;
+	border-color: transparent;
+}
+.carousel-block-table.v6-plus {
+	font-weight: 200;
+}
+.carousel-block-table.v6-plus ul li {
+	font-weight: 300;
+}
+.carousel-block-table.v6-plus ul li span {
+	margin-right: 5px;
+}
+.carousel-block-table .service-block-u {
+    background-color: #72c02c !important;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {	
+	.carousel-block-table .service-block {
+	    margin-bottom: 20px;
+	    padding: 20px 15px;
+	    text-align: center;
+	}
+}
+@media (max-width: 550px) {
+	 .col-width-full {
+		width: 100%;
+	}
+}
+
+
+
+.img_player {
+    background:#333;
+    border:1px solid #000;
+    padding:10px 10px 10px 10px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    text-align: center;
+}
+
+.img_player img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.img_player.full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.img_player .stage {
+    margin: 0 auto 0 auto;
+	padding: 0;
+	border: 0;
+    overflow:hidden;
+    text-align:center;    
+    position: relative;
+}
+
+/*
+img_player .stage img {
+    image-rendering: optimizeQuality;
+    -ms-interpolation-mode: bicubic;
+}
+*/
+
+.img_player .caption {
+    font-size: 28pt;
+    color: #AAA;
+    position: absolute;
+    z-index: 9999;
+    bottom: 4px;
+    text-align: center;
+    width: 100%;
+    text-shadow: 2px 2px black;
+    -webkit-text-stroke: 1px #777;
+    -ms-text-stroke: 1px #777;
+    -moz-text-stroke: 1px #777;
+    -o-text-stroke: 1px #777;
+    text-stroke: 1px #777;
+}
+
+.img_player .controls {
+	margin: 0 auto 0 auto;
+    height: 40px;
+    background:url(../img/player.png) 0 -120px repeat-x;
+    overflow:hidden;
+}
+
+.img_player .controls a {
+    text-decoration:none;
+    outline:none !important;
+    text-indent:-9999px;
+    display:block;
+    float:left;
+    width:35px;
+    height:40px;
+	 ie-dummy: expression(this.hideFocus=true);
+}
+
+.img_player .controls a:hover, .img_player .controls a:select, .img_player .controls a:active, .img_player .controls a:focus {
+    outline:none;
+}
+
+.img_player a.play  { background:url(../img/player.png) 0 0px no-repeat; }
+.img_player a.pause { background:url(../img/player.png) 0 -40px no-repeat; }
+.img_player a.next { background:url(../img/player.png) 0 -292px no-repeat; }
+.img_player a.prev   { background:url(../img/player.png) 0 -332px no-repeat; }
+.img_player a.start { background:url(../img/player.png) 0 -212px no-repeat; }
+.img_player a.end   { background:url(../img/player.png) 0 -172px no-repeat; }
+.img_player a.fullscreen { display: none; background:url(../img/player.png) 0 -252px no-repeat; }
+
+.img_player .scrubber {
+    float:left;
+    margin-left: 10px;
+    height:40px;
+    background:url(../img/player.png) 0 -80px repeat-x;
+}
+
+.img_player .scrubber a {
+    display:block;
+    position:relative;
+    top:50%;
+    left:0;
+    margin:-6px 0 0 0;
+    width:8px;
+    height:12px;
+    overflow:hidden;
+    text-decoration:none;
+    text-indent:-9999px;
+    outline:none;
+    background:url(../img/player.png) 0 -160px no-repeat;
+}
+
+.img_player .frame_count {
+    color: #999;
+    display: block;
+    padding: 13px 20px 0 0;
+    float: right;
+}
+
+.invisibleimageplayer {
+    display: none;
+}
+
+
+/* Popup First Visit */
+#fvpp-blackout {
+	display: none;
+	z-index: 499;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #000;
+	opacity: 0.5;
+}
+#popup {
+	display: none;
+	z-index: 5000;
+	position: fixed;
+	/*width: 80%;
+	left: 10%;
+	top: 40%;*/
+	width: 50%;
+	left: 50%;
+	top: 10%;
+	margin-left: -25%;
+	padding: 7px;
+	background: #fff;
+	border-radius: 7px;
+}
+#popup img {
+	margin: 0 auto;
+}
+#fvpp-close {
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	cursor: pointer;
+	background: #111;
+	padding: 5px;
+	line-height: 0.8;
+	border-radius: 50%;
+	color: #fff;
+	font-weight: bold;
+}
+
+/* Youtube iframe */
+.youtubeframe {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+	margin-bottom: 25px;
+}
+.youtubeframe iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.pasangsurut {
+	margin-bottom: 30px;
+}
+.col-ps {
+	margin-bottom: 20px;
+}
+
+
+
