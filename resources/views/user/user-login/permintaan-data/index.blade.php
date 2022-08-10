@@ -103,7 +103,12 @@
                                         @endif
                                     </td>
                                     <td>
+                                        @role('admin')
+                                        <form action="{{ route('admin.permintaan-data.destroy', $item->id) }}" method="POST">
+                                        @endrole
+                                        @role('user')
                                         <form action="{{ route('user.permintaan-data.destroy', $item->id) }}" method="POST">
+                                        @endrole
                                             @csrf
                                             @method('delete')
                                             @role('admin')

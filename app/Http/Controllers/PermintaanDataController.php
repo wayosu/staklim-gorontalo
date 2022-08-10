@@ -247,7 +247,11 @@ class PermintaanDataController extends Controller
 
         $infohb = PermintaanData::where('id', $id)->delete();
 
-        return redirect()->route('user.permintaan-data');
+        if (Auth::user()->hasRole('admin')) {
+            return redirect()->route('admin.permintaan-data');
+        } else {
+            return redirect()->route('user.permintaan-data');
+        }
     }
 
     public function senddata($id)
